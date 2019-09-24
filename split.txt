@@ -1,0 +1,10 @@
+{
+CHANGE 500 400
+SET C := 300 ;
+FD 70
+DO
+A FROM 1 TO 8 {
+SET C := C 2 / ;
+SPLIT C
+}
+}

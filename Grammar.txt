@@ -1,0 +1,17 @@
+<MAIN> ::= "{" <INSTRCTLST>
+<INSTRCTLST> ::= <INSTRUCTION><INSTRCTLST> |
+"}"
+<INSTRUCTION> ::= <FD> | <LT> | <RT> | <DO> | <SET> | <CHANGE> | <SPLIT> | <MAKE>
+<FD> ::= "FD" <VARNUM>
+<LT> ::= "LT" <VARNUM>
+<RT> ::= "RT" <VARNUM>
+<DO> ::= "DO" <VAR> "FROM" <VARNUM> "TO"
+<CHANGE> ::= "CHANGE" <VARNUM> <VARNUM>
+<SPLIT> ::= "SPLIT" <VARNUM>
+<MAKE> ::= "MAKE" <VARNUM>
+<VARNUM> "{" <INSTRCTLST>
+<VAR> ::= [A−Z]
+<VARNUM> ::= number | <VAR>
+<SET> ::= "SET" <VAR> ":=" <POLISH>
+<POLISH> ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
+<OP> ::= "+" | "−" | "*" | "/"

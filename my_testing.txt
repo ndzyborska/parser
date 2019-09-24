@@ -1,0 +1,24 @@
+
+testing.c and testparse.c show the testing carried out for interpreter and parser
+respectively. These ensure that there were no NULL pointers when mallocs occur and
+that the functions did what was expected. The results were printed out in the
+testfile.txt. In the testparse.c, various polish grammars could be inserted in
+the command line which would activate argv[3], and test that polish grammar to
+fail or succeed. The make file command for this is 'make polish'. Note that the
+bad_polish files are meant to show a fail in the testfile.txt.
+
+The instructions were tested by running with various code files and checking
+that each instruction did not print an error code. and created the expected pattern.
+Errors were purposfully put in place (unable to show due to exits) and for the
+ones a ran, error codes matched correctly.
+
+Valgrind was tested by 'make checkmem', which enabled a valgrind bool in my program
+structure. If this bool was true, it disabled all SDL functions to check if
+the code caused leaks.
+
+There are notes written throughout the interp.c where the testing helped me
+to fix some bugs I spotted. One bug that seemed to be unfixable in the time frame
+was the errors kept giving the word before or after (or correct). Next time, I would
+probably be more systematic with the incrementer so it is easier to keep track of.
+I incremented it in various functions, so it may have been better to just do it
+by hand each time in the instructions.

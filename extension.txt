@@ -1,0 +1,18 @@
+
+For my extension I decided I wanted to make something visual. For this, I created
+3 functions: CHANGE, MAKE and SPLIT.
+
+SPLIT: I was really keen on trying to create a fractal tree, so the split function
+creates 2 separate 'branches' for a given ditance at equal angles right and left.
+To initialise the tree, the tree was given the current coordinates of the
+previous command (to branch from), and then the VARNUM was inserted into the tree.
+The insert function went down the tree, checked that left AND right nodes were NULL,
+and created new coordinates for those nodes (using the normal Coordinate calculator).
+If they were not null, recurse call the function for both left and right nodes.
+Trees can be seen using 'make split' and 'make splits'.
+
+CHANGE: This allows you to make a jump, or set up your initial coordinates. This came
+in handy when i didnt want the function to begin in the centre.
+
+MAKE: This function took in a VARNUM, which would be used as a radius for a circle to
+be drawn. See 'make circle'.

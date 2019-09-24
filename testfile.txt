@@ -1,0 +1,15 @@
+init_program check: Complete
+insert_code check: Complete
+string_match check: Complete
+valid_varible check Complete
+in_range check Complete
+all_numbers check Complete
+Create_var test Complete
+varnum test Complete
+Change_var test Complete
+var_retriever test Complete
+check_var test Complete
+init_stack check: Complete
+operator test Complete
+stacks check: Complete
+Tree check: Complete
